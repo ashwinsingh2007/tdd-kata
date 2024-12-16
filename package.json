@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "testAndBuild": "node --loader ts-node/esm node_modules/mocha/bin/mocha 'test/**/*.test.ts'"
+    "build": "node --loader ts-node/esm node_modules/mocha/bin/mocha 'test/**/*.test.ts'"
   },
   "author": "",
   "license": "ISC",
