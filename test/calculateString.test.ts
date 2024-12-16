@@ -24,6 +24,13 @@ describe('String Calculator', () => {
     expect(add("//;\n1;2")).to.equal(3);
     expect(add("//|\n1|2|3")).to.equal(6);
   });
+  it('should throw an exception for negative numbers', () => {
+    expect(() => add("1,-2,3")).to.throw("negative numbers not allowed: -2");
+  });
+  
+  it('should list all negative numbers in the exception message if multiple are present', () => {
+    expect(() => add("1,-2,-3")).to.throw("negative numbers not allowed: -2,-3");
+  });
   
   
   
