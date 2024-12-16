@@ -17,5 +17,14 @@ describe('String Calculator', () => {
     expect(add("1,2,3,4")).to.equal(10);
     expect(add("10,20,30")).to.equal(60);
   });
+  it('should handle new lines as well as commas', () => {
+    expect(add("1\n2,3")).to.equal(6);
+  });
+  it('should support different delimiters specified at the start', () => {
+    expect(add("//;\n1;2")).to.equal(3);
+    expect(add("//|\n1|2|3")).to.equal(6);
+  });
+  
+  
   
 });
